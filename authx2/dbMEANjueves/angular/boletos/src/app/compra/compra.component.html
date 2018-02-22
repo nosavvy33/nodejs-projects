@@ -1,0 +1,42 @@
+<form class="mt-5" role="form" (submit)="comprar($event)">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h2>Por favor ingrese numero de tarjeta de credito</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="sr-only" for="tarjeta">Nro° Tarjeta de Credito</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                            <input type="text" name="tarjeta" class="form-control" id="tarjeta"
+                                   placeholder="Nro° tarjeta de pago"  autofocus required >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="btn-group mt-3" data-toggle="buttons">
+            <label class="btn btn-primary active" (click)="costoB(items[0].Precio[0].norte,'norte')">
+                <input type="radio" value={{items[0].Precio[0].norte}} name="options" id="norte" autocomplete="off" checked> norte: S/.{{items[0].Precio[0].norte}}
+            </label>
+            <label class="btn btn-primary" (click)="costoB(items[0].Precio[0].sur,'sur')">
+                <input type="radio" value={{items[0].Precio[0].sur}} name="options" id="sur" autocomplete="off"> sur:    S/.{{items[0].Precio[0].sur}}
+            </label>
+            <label class="btn btn-primary" (click)="costoB(items[0].Precio[0].occidente,'occidente')">
+                <input type="radio" value={{items[0].Precio[0].occidente}} name="options" id="occidente" autocomplete="off"> occidente: S/.{{items[0].Precio[0].occidente}}
+            </label>
+            <label class="btn btn-primary" (click)="costoB(items[0].Precio[0].oriente,'oriente')">
+                <input type="radio" value={{items[0].Precio[0].oriente}} name="options" id="oriente" autocomplete="off"> oriente: S/.{{items[0].Precio[0].oriente}}
+            </label>
+        </div>
+            <div class="row" style="padding-top: 1rem">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-success">Comprar</button>
+                </div>
+            </div>
+        </form>

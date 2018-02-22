@@ -1,0 +1,3 @@
+a="$LOGNAME"
+b="$LOGNAME"
+c='date'

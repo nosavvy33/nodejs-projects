@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Sistema de control de bandas</title>
+</head>
+<body>
+<h1> Editar banda</h1>
+<hr>
+<form method=post action=/m_bandas_grabar_editar>
+<input type=hidden name=xid value=<%= banda.id %>>
+<table border=0>
+	<tr><td>Nombre: </td><td><input type=text name=xnom size=30 value='<%= banda.nombre %>'></td></tr>
+	<tr><td>Fundacion: </td><td><input type=text name=xfun size=10 value=<%= banda.fundacion %>></td></tr>
+	<tr><td></td><td><input type=submit value=Grabar></td></tr>
+</table>
+</form>
+</body>
+</html>

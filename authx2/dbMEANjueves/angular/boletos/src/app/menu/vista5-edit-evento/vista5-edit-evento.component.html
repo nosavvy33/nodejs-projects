@@ -1,0 +1,37 @@
+<div style="position:relative;margin:20px auto; width:80%">
+    <form>
+        
+  <table class="table table-striped text-center table table-inverse" border="5">
+      <tr class="info">
+          <th colspan="2" class="text-center">Equipos</th>
+          <th class="text-center">Estadio</th>
+          <th class="text-center">Fecha</th>
+          <th colspan="4" class="text-center">Precios</th>
+          <th colspan="2" class="text-center">Acciones</th>
+      </tr>
+      <tr class="info">
+          <th class="text-center">Local</th>
+          <th class="text-center">Visitante</th>
+          <th></th>
+          <th></th>
+          <th>Norte</th>
+          <th>Sur</th>
+          <th>Oriente</th>
+          <th>Occidente</th>
+          <th></th>
+      </tr>
+      <tr>
+          <td> <input size="10" type="text" name="local" [(ngModel)]="editEvent.local"   > </td>
+          <td><input size="10" type="text" name="visitante" [(ngModel)]="editEvent.visitante"></td>
+          <td><input size="10" type="text" name="estadio" [(ngModel)]="editEvent.estadio"></td>
+          <td><input size="10" type="text" name="fecha" [(ngModel)]="editEvent.fecha"></td>
+          <td><input size="1" type="text" name="norte" [(ngModel)]="editEvent.Precio[0].norte"></td>
+          <td><input size="1" type="text" name="sur" [(ngModel)]="editEvent.Precio[0].sur"></td>
+          <td><input size="1" type="text" name="oriente" [(ngModel)]="editEvent.Precio[0].oriente"></td>
+          <td><input size="1" type="text" name="occidente" [(ngModel)]="editEvent.Precio[0].occidente"></td>
+          <td><a (click)="actualizar()" class="btn btn-warning">Editar</a></td>       
+      </tr>
+  </table>
+    </form>
+
+</div>

@@ -1,0 +1,9 @@
+<div *ngFor="let even of Eventoss" class="jumbotron text-center mt-5">
+	<h1>{{even.local}} - VS - {{even.visitante}} </h1>
+	<h2>Estadio : {{even.estadio}}</h2>
+	<h3>fecha : {{even.fecha}}</h3>
+	<h4>norte: S/.{{even.Precio[0].norte}} -  sur: S/.{{even.Precio[0].sur}} -  oriente: S/.{{even.Precio[0].oriente}} -  occidente: S/.{{even.Precio[0].occidente}}</h4>
+	<button (click)="alCoche(even)" type="button" class="btn btn-outline-primary btn-lg mt-5">
+			Agregar al carrito
+	</button>
+</div>

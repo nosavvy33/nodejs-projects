@@ -1,0 +1,49 @@
+<div class="jumbotron text-center">
+	<h1>The Carrito de compras :v 	</h1>
+</div>
+<div class="container">
+	
+
+<div *ngIf="carroVacio" class="container text-center">
+	<h1 class="display-1 text-danger">Carrito Vacio :v </h1>
+</div>
+<div *ngFor="let item of arreglo;let i=index "  class="jumbotron text-center">
+	<div *ngIf="!Estadito[i][0]" class="container">
+		<button (click)="Estadito[i][0]=true" type="button" class="btn btn-outline-primary btn-lg mt-3">
+			deshacer?
+		</button> 
+	</div>
+	<div *ngIf="!comprateEste[i][0]" class="container">
+			<h1 class="display-4">Gracias por su compra !</h1>
+	</div>
+	<div *ngIf="Estadito[i][0] && comprateEste[i][0]" class="container">
+		<h1>{{item[0].local}} VS {{item[0].visitante}}</h1>
+		<h2>Estadio: {{item[0].estadio}}</h2>
+		<h3>Fecha: {{item[0].fecha}}</h3>
+
+		<br>
+		<button (click)="Estadito[i][0]=false" type="button" class="btn btn-outline-primary btn-lg mt-3">
+			Quitar del carrito
+		</button>
+		<button *ngIf="formCompra[i][0]"(click)="formCompra[i][0]=!formCompra[i][0]" type="button" class="btn btn-outline-primary btn-lg mt-3">
+			cancelar
+		</button>		
+		<button (click)="comprarOne(item,i,$event); formCompra[i][0]=!formCompra[i][0];"*ngIf="!formCompra[i][0]" type="button" class="btn btn-outline-primary btn-lg mt-3">
+			Comprar Entrada
+		</button>
+	<app-compra *ngIf="formCompra[i][0]"  [items]="item" [posicion]="i" (eventoSalida)="tovista2($event)" ></app-compra>
+		<h5 class="mt-5">{{i+1}}</h5>
+	</div>
+</div>
+</div>
+<div *ngIf="!carroVacio" class="jumbotron text-center">
+	<button (click)="comprar(item,i)" type="button" class="btn btn-outline-primary btn-lg mt-5">
+		Comprar
+	</button>
+	<button (click)="vaciar()" type="button" class="btn btn-outline-primary btn-lg mt-5">
+		Vaciar Carrito
+	</button>
+
+</div>
+  
+

@@ -1,0 +1,32 @@
+<nav *ngIf='estado' class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="vista1">Eventos</a>
+
+  
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="text-center nav-link font-italic" href="vista2"> <i class="fa fa-shopping-cart" aria-hidden="true"></i><br>Carrito</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center font-italic" href="vista3"><i class="fa fa-shopping-bag" aria-hidden="true"></i><br>Historial</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center font-italic" href="vista5"><i class="fa fa-gears" aria-hidden="true"></i><br>Gestionar Eventos</a>
+      </li>
+     
+    </ul>
+      
+      <a class="nav-link btn btn-danger text-center font-italic" href="vista4" (click)="salir()" ><i class="fa fa-sign-out"></i><br>LogOut </a>
+    
+  </div>
+
+
+</nav>
+ <router-outlet *ngIf='estado'></router-outlet>
+<!--Holy shiett nigga funciono Oo!!-->
+

@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Sistema de control de Areas</title>
+</head>
+<body>
+<h1> Mantenimiento de Areas</h1>
+<hr>
+<p><a href=/m_areas_nuevo> Nueva Area</a></p>
+<table border=1>
+<tr><th>NOMBRE</th><th>ABREVIATURA</th><th>ESTADO</th><th colspan = 2> ACCIONES</th></tr>
+
+<% records.forEach(function (area){ %>
+<tr><td><%=area.Nombre %></td>
+	<td><%=area.Abreviatura %></td>
+	<td><%=area.Estado %></td>
+	<td><a href=/m_areas_editar/<%=area.Nombre %>> Editar </a></td>
+	<td><a href=/m_areas_eliminar/<%=area.Nombre %>> Eliminar </a></td>
+</tr>
+<% }); %>
+</table>
+</body>
+</html>

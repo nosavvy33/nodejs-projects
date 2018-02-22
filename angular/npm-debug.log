@@ -1,0 +1,67 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '@angular',
+1 verbose cli   '/cli',
+1 verbose cli   '-g' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData @angular
+8 silly fetchPackageMetaData /cli
+9 silly fetchOtherPackageData @angular
+10 silly cache add args [ '@angular', null ]
+11 verbose cache add spec @angular
+12 silly fetchOtherPackageData /cli
+13 silly cache add args [ '/cli', null ]
+14 verbose cache add spec /cli
+15 silly cache add parsed spec Result {
+15 silly cache add   raw: '@angular',
+15 silly cache add   scope: null,
+15 silly cache add   name: null,
+15 silly cache add   rawSpec: '@angular',
+15 silly cache add   spec: '/var/www/html/nodejs/angular/@angular',
+15 silly cache add   type: 'local' }
+16 silly cache add parsed spec Result {
+16 silly cache add   raw: '/cli',
+16 silly cache add   scope: null,
+16 silly cache add   name: null,
+16 silly cache add   rawSpec: '/cli',
+16 silly cache add   spec: '/cli',
+16 silly cache add   type: 'local' }
+17 error addLocal Could not install /var/www/html/nodejs/angular/@angular
+18 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/var/www/html/nodejs/angular/@angular'
+18 silly fetchPackageMetaData     at Error (native)
+18 silly fetchPackageMetaData  error for @angular { [Error: ENOENT: no such file or directory, open '/var/www/html/nodejs/angular/@angular']
+18 silly fetchPackageMetaData   errno: -2,
+18 silly fetchPackageMetaData   code: 'ENOENT',
+18 silly fetchPackageMetaData   syscall: 'open',
+18 silly fetchPackageMetaData   path: '/var/www/html/nodejs/angular/@angular' }
+19 error addLocal Could not install /cli
+20 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/cli'
+20 silly fetchPackageMetaData     at Error (native)
+20 silly fetchPackageMetaData  error for /cli { [Error: ENOENT: no such file or directory, open '/cli'] errno: -2, code: 'ENOENT', syscall: 'open', path: '/cli' }
+21 silly rollbackFailedOptional Starting
+22 silly rollbackFailedOptional Finishing
+23 silly runTopLevelLifecycles Starting
+24 silly runTopLevelLifecycles Finishing
+25 silly install printInstalled
+26 verbose stack Error: ENOENT: no such file or directory, open '/var/www/html/nodejs/angular/@angular'
+26 verbose stack     at Error (native)
+27 verbose cwd /var/www/html/nodejs/angular
+28 error Linux 4.10.0-35-generic
+29 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "@angular" "/cli" "-g"
+30 error node v4.2.6
+31 error npm  v3.5.2
+32 error path /var/www/html/nodejs/angular/@angular
+33 error code ENOENT
+34 error errno -2
+35 error syscall open
+36 error enoent ENOENT: no such file or directory, open '/var/www/html/nodejs/angular/@angular'
+37 error enoent ENOENT: no such file or directory, open '/var/www/html/nodejs/angular/@angular'
+37 error enoent This is most likely not a problem with npm itself
+37 error enoent and is related to npm not being able to find a file.
+38 verbose exit [ -2, true ]

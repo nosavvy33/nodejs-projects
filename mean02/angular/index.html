@@ -1,0 +1,54 @@
+<!doctype html>
+<html ng-app="MainApp">
+<head>
+	<title>Segundo ejemplo MEAN</title>
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<script src="nucleo.js"></script>
+</head>
+<body ng-controller="controladorPrincipal">
+<div class = "container">
+	<div class="jumbotron">
+		<h1>Nro de registros: - {{ estadios.length}} -</h1>	
+	</div>
+<div class="row">
+<div class="col-sm-6 col-sm-offset-1">
+<table class="table table-striped">
+	<tr class="info">
+		<td>Nombre</td>
+		<td>Capacidad</td>
+		<td>Localización</td>
+		<td>Estado</td>
+	</tr>
+	<tr ng-repeat="estadio in estadios" ng-click="selectEstadio(estadio)">
+		<td>{{ estadio.nombre }}</td>
+		<td>{{ estadio.capacidad }}</td>
+		<td>{{ estadio.localizacion }}</td>
+		<td>{{ estadio.estado }}</td>
+	</tr>
+</table>
+</div>
+
+<div class="col-sm-4 col-sm-offset-1 text-center">
+<form name="myForm">
+	<div class="form-group">
+		<input type="text" class="form-control input-lg text-center" placeholder="Nombre" ng-model="newEstadio.nombre" required><br>
+		<input type="text" class="form-control input-lg text-center" placeholder="Capacidad" ng-model="newEstadio.capacidad" required><br>
+		<input type="text" class="form-control input-lg text-center" placeholder="Localizacion" ng-model="newEstadio.localizacion" required><br>
+		<input type="text" class="form-control input-lg text-center" placeholder="Estado" ng-model="newEstadio.estado" required>
+	</div>
+	<!--- ACCIONES POSIBLES EN EL FORM-->
+	<button type=submit class="btn btn-success btn-lg" ng-click="registrarEstadio()" ng-disabled="myForm.$invalid || selected">Crear</button>
+	<button type="submit" class="btn btn-warning btn-lg" ng-click="modificarEstadio(newEstadio)" ng-disabled="!newEstadio.nombre || !newEstadio.capacidad || !newEstadio.estado || !newEstadio.localizacion">Modificar</button>
+	<button type="submit" class="btn btn-danger btn-lg" ng-click="borrarEstadio(newEstadio)" ng-disabled="!newEstadio.nombre || !newEstadio.capacidad || !newEstadio.estado || !newEstadio.localizacion ||!selected">Eliminar</button>
+</form>
+</div>
+
+
+
+
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="MainApp">
+<head>
+	<title>Segundo ejemplo MEAN</title>
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<script src="nucleo.js"></script>
+</head>
+<body>
+hola!
+<div class="col-sm-6 col-sm-offset-1">
+<table class="table table-striped">
+	<tr class="info">
+		<td>Usuario</td>
+		<td>Password</td>
+		<td>Email</td>
+	</tr>
+	<tr ng-repeat="usuario in usuarios">
+		<td>{{ usuario.user }}</td>
+		<td>{{ usuario.password }}</td>
+		<td>{{ usuario.email }}</td>
+	</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Sistema de control de areas</title>
+</head>
+<body>
+<h1> Editar Area</h1>
+<hr>
+<form method=post action=/m_areas_grabar_editar>
+<input type=hidden name=xnom value=<%= area.Nombre %>>
+<table border=0>
+	<tr><td>Nombre: </td><td><input type=text name=xnom size=30 value='<%= area.Nombre %>'></td></tr>
+	<tr><td>Abreviatura: </td><td><input type=text name=xabr size=1 value=<%= area.Abreviatura %>></td></tr>
+	<tr><td>Estado: </td><td><input type=text name=xest size=10 value=<%= area.Estado %>></td></tr>
+	<tr><td></td><td><input type=submit value=Grabar></td></tr>
+</table>
+</form>
+</body>
+</html>

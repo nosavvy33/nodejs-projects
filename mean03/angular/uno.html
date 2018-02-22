@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="MainApp">
+<head>
+	<title>Segundo ejemplo MEAN</title>
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<script src="nucleo.js"></script>
+</head>
+<body ng-controller="controladorPrincipal">
+<div class = "container">
+	<div class="jumbotron">
+		<h1>Login form</h1>	
+	</div>
+
+
+<div class="col-sm-4 col-sm-offset-1 text-center">
+<form name="myForm">
+	<div class="form-group">
+		<input type="text" class="form-control input-lg text-center" placeholder="User" ng-model="Usuario.user" required><br>
+		<input type="text" class="form-control input-lg text-center" placeholder="Password" ng-model="Usuario.password" required><br>
+	</div>
+	<!--- ACCIONES POSIBLES EN EL FORM-->
+	<button type=submit class="btn btn-success btn-lg" ng-click="lookforUsuario()" ng-disabled="myForm.$invalid || selected">Ingresar</button>
+</form>
+</div>
+
+<div class="col-sm-4 col-sm-offset-1 text-center">
+<form name="Formtwo">
+	<div class="form-group">
+		<input type="text" class="form-control input-lg text-center" placeholder="User" ng-model="User.user" required><br>
+		<input type="text" class="form-control input-lg text-center" placeholder="Password" ng-model="User.password" required><br>
+		<input type="text" class="form-control input-lg text-center" placeholder="Email" ng-model="User.email" required><br>
+	</div>
+	<!--- ACCIONES POSIBLES EN EL FORM-->
+	<button type=submit class="btn btn-success btn-lg" ng-click="createUsuario()" ng-disabled="Formtwo.$invalid || selected">Crear</button>
+	<button type=submit class="btn btn-success btn-lg" ng-click="deleteUsuario()" ng-disabled="Formtwo.$invalid || selected">Eliminar</button>
+</form>
+</div>
+
+
+
+
+
+</div>
+</body>
+</html>

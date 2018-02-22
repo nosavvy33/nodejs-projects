@@ -1,0 +1,79 @@
+<h1>Crear Evento</h1>
+<hr>
+        <div style="" class="formulario">
+        <form action="">
+            <div class="row">
+                <div class="col-3">
+                    <label for="">Local</label>
+                </div>
+                <div class="col">
+<input  type="text" name="local" [(ngModel)]="newEvento.local"   >
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                        <label for="">Visitante</label>
+                    </div>
+                    <div class="col">
+<input  type="text" name="visitante" [(ngModel)]="newEvento.visitante">
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                        <label for="">Estadio</label>
+                    </div>
+                    <div class="col">
+<input  type="text" name="estadio" [(ngModel)]="newEvento.estadio">
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                        <label for="">Fecha</label>
+                    </div>
+                    <div class="col">
+<input  type="text" name="fecha" [(ngModel)]="newEvento.fecha">
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                        <label for=""><strong>Precios</strong></label>
+                    </div>
+
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                        <label for="">Norte</label>
+                    </div>
+                    <div class="col">
+<input  type="text" name="norte" [(ngModel)]="newPrecio.norte">
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                        <label for="">Sur</label>
+                    </div>
+                    <div class="col">
+<input  type="text" name="norte" [(ngModel)]="newPrecio.sur">
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                        <label for="">Oriente</label>
+                    </div>
+                    <div class="col">
+<input  type="text" name="norte" [(ngModel)]="newPrecio.oriente">
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                        <label for="">Occidente</label>
+                    </div>
+                    <div class="col">
+<input  type="text" name="norte" [(ngModel)]="newPrecio.occidente">
+                    </div>
+            </div><br>
+            <div style="position:relative;margin:auto;">
+                <button (click)="registrar()" type="submit" class="btn btn-success btn-lg crear" >Crear Evento</button>
+            </div>
+        </form>
+        </div>

@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Sistema de control de bandas</title>
+</head>
+<body>
+<h1> Mantenimiento de Bandas</h1>
+<hr>
+<p><a href=/m_bandas_nuevo> Nueva Banda</a></p>
+<table border=1>
+<tr><th>ID</th><th>NOMBRE</th><th>FUNDACION</th><th colspan = 2> ACCIONES</th></tr>
+
+<% records.forEach(function (banda){ %>
+<tr><td><%=banda.id %></td>
+	<td><%=banda.nombre %></td>
+	<td><%=banda.fundacion %></td>
+	<td><a href=/m_bandas_editar/<%=banda.id %>> Editar </a></td>
+	<td><a href=/m_bandas_eliminar/<%=banda.id %>> Eliminar </a></td>
+</tr>
+<% }); %>
+</table>
+</body>
+</html>

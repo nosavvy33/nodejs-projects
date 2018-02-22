@@ -1,0 +1,42 @@
+<div style="position:relative;margin:20px auto; width:80%">
+    <a href="vista5-new-evento" class="btn btn-success">Nuevo Evento</a><br><br>
+    <div  *ngFor="let evento of Eventos, let i=index ">
+
+  <table class="table table-striped text-center" border="5" >
+      <tr class="info">
+          <th colspan="2" class="text-center">Equipos</th>
+          <th class="text-center">Estadio</th>
+          <th class="text-center">Fecha</th>
+          <th colspan="4" class="text-center">Precios</th>
+          <th colspan="2" class="text-center">Acciones</th>
+      </tr>
+      <tr class="info">
+          <th class="text-center">Local</th>
+          <th class="text-center">Visitante</th>
+          <th></th>
+          <th></th>
+          <th>Norte</th>
+          <th>Sur</th>
+          <th>Oriente</th>
+          <th>Occidente</th>
+          <th></th>
+          <th></th>
+      </tr>
+      <tr >
+          <td>{{evento.local}}</td>
+          <td>{{evento.visitante}}</td>
+          <td>{{evento.estadio}}</td>
+          <td>{{evento.fecha}}</td>
+          <td>{{evento.Precio[0].norte}}</td>
+          <td>{{evento.Precio[0].sur}}</td>
+          <td>{{evento.Precio[0].oriente}}</td>
+          <td>{{evento.Precio[0].occidente}}</td>
+          <td><a (click)="estado[i][0]=!estado[i][0]" class="btn btn-warning">Editar</a></td>
+          <td><button class="btn btn-danger" (click)="eliminarEvento(evento._id)">Eliminar</button></td>
+      </tr>
+  </table>
+      <app-vista5-edit-evento *ngIf="estado[i][0]" [editables]="evento" ></app-vista5-edit-evento>
+
+    </div>
+
+</div>
